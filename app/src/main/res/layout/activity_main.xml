@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Spinner
+        android:id="@+id/chooseWhatToDo"
+        android:layout_width="404dp"
+        android:layout_height="108dp"
+        android:layout_marginTop="144dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.597" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="103dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="95dp"
+        android:fontFamily="sans-serif-medium"
+        android:text=""
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.831"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.916" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="418dp"
+        android:layout_height="88dp"
+        android:background="#673AB7"
+        android:fontFamily="sans-serif-black"
+        android:text="\nWords Counter App"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:typeface="sans"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/inputField"
+        android:layout_width="252dp"
+        android:layout_height="62dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Input your text here"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.303" />
+
+    <Button
+        android:id="@+id/countWordsButton"
+        android:layout_width="148dp"
+        android:layout_height="69dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="count"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.197"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.948" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
