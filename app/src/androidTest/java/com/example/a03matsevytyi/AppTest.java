@@ -28,23 +28,23 @@ public class AppTest {
 
     @Test
     public void countWordsButton_Clicked_DisplayResult() {
-        // Type a sample text in the input field
+
         Espresso.onView(ViewMatchers.withId(R.id.inputField))
                 .perform(ViewActions.replaceText("This is a sample text"), ViewActions.closeSoftKeyboard());
 
-        // Choose "Count Words" in the spinner
+        //choose "Count Words" in the spinner
         Espresso.onView(withId(R.id.chooseWhatToDo))
                 .perform(click());
         Espresso.onData(allOf(is(instanceOf(String.class)), is("Count Words"))).perform(click());
 
+        //check whether correct option was chosen
         Espresso.onView(withId(R.id.chooseWhatToDo))
                 .check(matches(withSpinnerText("Count Words")));
 
-        // Click the "Count Words" button
         Espresso.onView(withId(R.id.countWordsButton))
                 .perform(click());
 
-        // Check if the result is displayed with the correct count
+        //check if the result is displayed with the correct count
         Espresso.onView(withId(R.id.result))
                 .check(matches(isDisplayed()))
                 .check(matches(withText("You have 5 words")));
@@ -52,25 +52,24 @@ public class AppTest {
 
     @Test
     public void countCharactersButton_Clicked_DisplayResult() {
-        // Type a sample text in the input field
+
         Espresso.onView(withId(R.id.inputField))
                 .perform(ViewActions.replaceText("This is a sample text"), ViewActions.closeSoftKeyboard());
 
-        // Choose "Count Characters" in the spinner
+        //choose "Count Characters" in the spinner
         Espresso.onView(withId(R.id.chooseWhatToDo))
                 .perform(click());
 
         Espresso.onData(allOf(is(instanceOf(String.class)), is("Count Characters"))).perform(click());
 
+        //check whether correct option was chosen
         Espresso.onView(withId(R.id.chooseWhatToDo))
                 .check(matches(withSpinnerText("Count Characters")));
 
-        // Click the "Count Characters" button
         Espresso.onView(withId(R.id.countWordsButton))
                 .perform(click());
 
-
-        // Check if the result is displayed with the correct count
+        //check if the result is displayed with the correct count
         Espresso.onView(withId(R.id.result))
                 .check(matches(isDisplayed()))
                 .check(matches(withText("You have 17 characters")));
